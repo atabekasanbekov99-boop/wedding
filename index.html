@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Свадьба Байэла и Мадины</title>
+<meta name="description" content="Приглашаем вас на нашу свадьбу 25 декабря 2026 в 17:00, ресторан «Улуу Тоо», Бишкек">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Свадьба Байэла и Мадины">
+<meta property="og:description" content="25 декабря 2026, 17:00 · ресторан «Улуу Тоо», Бишкек. Приглашаем вас разделить этот день с нами">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+:root{--bg:#efe6ec;--ink:#2a1a33;--muted:#6b5a73;--accent:#b4476b;--card:#f8f2f6;--line:#d8c6d2;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1223;--ink:#f1e6ee;--muted:#b9a5c0;--accent:#e58aa8;--card:#2a1b33;--line:#4a3555}}
+:root[data-theme="dark"]{--bg:#1d1223;--ink:#f1e6ee;--muted:#b9a5c0;--accent:#e58aa8;--card:#2a1b33;--line:#4a3555}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Jost,system-ui,sans-serif;font-weight:300;line-height:1.6;text-align:center}
+main{max-width:640px;margin:0 auto;padding:56px 22px 72px}
+.invite{font-size:1.05rem;color:var(--muted);margin:0 0 18px}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(3.2rem,15vw,6rem);line-height:.95;margin:0;letter-spacing:-.01em}
+h1 span{display:block;font-style:italic;font-size:.45em;color:var(--accent);margin:.2em 0}
+.date{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;margin:30px 0 4px}
+.place{color:var(--muted);margin:0 0 40px}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 56px}
+.count div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 4px}
+.count b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(2rem,9vw,3rem);line-height:1;font-variant-numeric:tabular-nums}
+.count small{color:var(--muted);font-size:.85rem}
+.msg{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;line-height:1.5;margin:0 auto 44px;max-width:30ch}
+dl{margin:0 0 44px;text-align:left;border-top:1px solid var(--line)}
+dl div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+dt{color:var(--muted)}dd{margin:0;font-weight:400;text-align:right}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:500;padding:14px 32px;border-radius:999px;border:0;font:inherit;font-weight:500;cursor:pointer}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.note{color:var(--muted);font-size:.9rem;margin-top:14px}
+.map{display:inline-block;margin-top:14px;color:var(--accent);font-weight:500;text-decoration:none;border:1px solid var(--accent);border-radius:999px;padding:9px 22px}
+.map:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.rsvp input[type=text],.rsvp input:not([type]){width:100%;font:inherit;font-weight:400;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;margin:0 0 12px}
+.rsvp input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.choice{display:flex;justify-content:center;gap:28px;margin:6px 0 24px}
+.choice label{display:flex;align-items:center;gap:8px;cursor:pointer}
+.choice input{accent-color:var(--accent);width:18px;height:18px}
+</style>
+</head>
+<body>
+<main>
+  <p class="invite">Мы женимся и приглашаем вас разделить этот день с нами</p>
+  <h1>Байэл<span>и</span>Мадина</h1>
+  <p class="date" id="date">25 декабря 2026, 17:00</p>
+  <p class="place">Бишкек, ресторан «Улуу Тоо»<br>проспект Ленина, 185/1<br><a class="map" href="https://2gis.kg/bishkek/search/Улуу Тоо проспект Ленина 185/1" target="_blank" rel="noopener">Как добраться в 2ГИС</a></p>
+
+  <div class="count" role="timer" aria-live="off">
+    <div><b id="d">0</b><small>дней</small></div>
+    <div><b id="h">0</b><small>часов</small></div>
+    <div><b id="m">0</b><small>минут</small></div>
+    <div><b id="s">0</b><small>секунд</small></div>
+  </div>
+
+  <p class="msg">Будем рады видеть вас среди самых близких людей.</p>
+
+  <dl>
+    <div><dt>Сбор гостей</dt><dd>17:00</dd></div>
+    <div><dt>Церемония</dt><dd>17:30</dd></div>
+    <div><dt>Банкет</dt><dd>19:00</dd></div>
+    <div><dt>Дресс-код</dt><dd>нарядный, в мягких тонах</dd></div>
+  </dl>
+
+  <section class="rsvp">
+    <p class="msg" style="margin-bottom:18px">Сообщите, придёте ли вы</p>
+    <input id="name" placeholder="Ваше имя" autocomplete="name">
+    <input id="who" placeholder="Кто вы? Например, друг жениха">
+    <div class="choice">
+      <label><input type="radio" name="a" value="Приду" checked> Приду</label>
+      <label><input type="radio" name="a" value="Не смогу прийти"> Не смогу</label>
+    </div>
+    <a class="btn" id="send" href="#" target="_blank" rel="noopener">Отправить ответ в WhatsApp</a>
+    <p class="note">Откроется WhatsApp с готовым сообщением, останется нажать «Отправить»</p>
+  </section>
+</main>
+<script>
+// Измените эти значения под вашу свадьбу
+var WEDDING = new Date('2026-12-25T17:00:00+06:00');
+var PHONE = '996704524330'; // номер организатора в WhatsApp, только цифры, с кодом страны
+
+var months = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+document.getElementById('date').textContent = WEDDING.getDate() + ' ' + months[WEDDING.getMonth()] + ' ' + WEDDING.getFullYear();
+var send = document.getElementById('send');
+function msgLink(){
+  var name = document.getElementById('name').value.trim();
+  var who = document.getElementById('who').value.trim();
+  var ans = document.querySelector('input[name=a]:checked').value;
+  var text = 'Свадьба Байэла и Мадины, 25 декабря.\nГость: ' + name + (who ? ' (' + who + ')' : '') + '\nОтвет: ' + ans;
+  return 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(text);
+}
+send.addEventListener('click', function(e){
+  var n = document.getElementById('name');
+  if(!n.value.trim()){ e.preventDefault(); n.focus(); n.placeholder = 'Введите ваше имя'; return; }
+  send.href = msgLink();
+});
+
+var el = {d:document.getElementById('d'),h:document.getElementById('h'),m:document.getElementById('m'),s:document.getElementById('s')};
+function tick(){
+  var t = Math.max(0, WEDDING - new Date());
+  var sec = Math.floor(t/1000);
+  el.d.textContent = Math.floor(sec/86400);
+  el.h.textContent = String(Math.floor(sec%86400/3600)).padStart(2,'0');
+  el.m.textContent = String(Math.floor(sec%3600/60)).padStart(2,'0');
+  el.s.textContent = String(sec%60).padStart(2,'0');
+}
+tick(); setInterval(tick, 1000);
+</script>
+</body>
+</html>
